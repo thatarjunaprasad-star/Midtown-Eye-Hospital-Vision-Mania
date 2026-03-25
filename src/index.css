@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-red: #ff003c;
+  --color-neon-red-glow: rgba(255, 0, 60, 0.5);
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900;
+  }
+}
+
+.neon-border {
+  border: 2px solid var(--color-neon-red);
+  box-shadow: 0 0 10px var(--color-neon-red-glow), inset 0 0 5px var(--color-neon-red-glow);
+}
+
+.neon-text {
+  color: var(--color-neon-red);
+  text-shadow: 0 0 5px var(--color-neon-red-glow);
+}
+
+.neon-button {
+  @apply bg-white border-2 border-neon-red text-neon-red font-bold py-2 px-4 rounded transition-all duration-300;
+  box-shadow: 0 0 5px var(--color-neon-red-glow);
+}
+
+.neon-button:hover {
+  @apply bg-neon-red text-white;
+  box-shadow: 0 0 15px var(--color-neon-red);
+}
